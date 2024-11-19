@@ -1,0 +1,48 @@
+<!-- index.jsp -->
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page import="java.sql.*" %>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Epic RPG Adventure</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <%
+        // Check if save file exists
+        boolean saveExists = false;
+        try {
+            Class.forName("com.mysql.jdbc.Driver");
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/rpg_database", "username", "password");
+            Statement stmt = conn.createStatement();
+            ResultSet rs = stmt.executeQuery("SELECT * FROM save_data LIMIT 1");
+            saveExists = rs.next();
+            conn.close();
+        } catch(Exception e) {
+            e.printStackTrace();
+        }
+    %>
+    
+    <div class="video-background">
+        <video autoplay muted loop id="bgVideo">
+            <!-- Replace YOUR_VIDEO_ID with actual Google Drive video ID -->
+            <source src="https://drive.google.com/uc?export=download&id=YOUR_VIDEO_ID" type="video/mp4">
+        </video>
+    </div>
+
+    <div class="content">
+        <h1>Epic RPG Adventure</h1>
+        <div class="menu-container">
+            <% if(saveExists) { %>
+                <a href="continue.jsp" class="menu-button">Continue</a>
+            <% } %>
+            <a href="newgame.jsp" class="menu-button">New Game</a>
+            <a href="stats.jsp" class="menu-button">Stats</a>
+            <a href="javascript:void(0)" onclick="exitGame()" class="menu-button">Exit</a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

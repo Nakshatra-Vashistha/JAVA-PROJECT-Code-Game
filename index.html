@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minecraft-Style Title Screen</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Background Video -->
+    <video autoplay loop muted playsinline class="background-video">
+        <source src="video2.mp4" type="video/mp4">
+    </video>
+
+    <div class="title">
+        The Hacker’s Curse
+        <div class="java-edition">
+            Code of the Lost Realm
+        </div>
+    </div>
+
+    <div class="button-container">
+        <div class="minecraft-button">Singleplayer</div>
+        <div class="minecraft-button">Multiplayer</div>
+        <div class="minecraft-button">Minecraft Realms</div>
+        
+        <div class="bottom-buttons">
+            <div class="minecraft-button">Options...</div>
+            <div class="minecraft-button" id="quit-button">Quit Game</div>
+        </div>
+    </div>
+
+    <div class="version-text">Codebound Chronicles</div>
+    <div class="copyright">Copyright ByteMan</div>
+
+    <script>
+        // Event listener for Quit Game button
+        document.getElementById('quit-button').addEventListener('click', function() {
+            // Attempt to close the window
+            if (confirm("Are you sure you want to quit?")) {
+                window.close();
+            }
+        });
+    </script>
+</body>
+</html>
