@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Story Game</title>
+    <link rel="stylesheet" href="dialogue-game-css.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="video-background">
+            <!-- Space for user-inserted video -->
+            <video id="background-video" autoplay loop muted>
+                <!-- User will replace this with their own video source -->
+                <source src="" type="video/mp4">
+            </video>
+        </div>
+
+        <div class="dialogue-overlay">
+            <div class="character-cards">
+                <div class="character-card" id="character1">
+                    <div class="character-info">
+                        <img src="" alt="Character 1" class="character-image">
+                        <h3 class="character-name">Character 1</h3>
+                    </div>
+                    <div class="dialogue-box">
+                        <p class="dialogue-text"></p>
+                    </div>
+                </div>
+
+                <div class="character-card" id="character2">
+                    <div class="character-info">
+                        <img src="" alt="Character 2" class="character-image">
+                        <h3 class="character-name">Character 2</h3>
+                    </div>
+                    <div class="dialogue-box">
+                        <p class="dialogue-text"></p>
+                    </div>
+                </div>
+
+                <div class="character-card" id="character3">
+                    <div class="character-info">
+                        <img src="" alt="Character 3" class="character-image">
+                        <h3 class="character-name">Character 3</h3>
+                    </div>
+                    <div class="dialogue-box">
+                        <p class="dialogue-text"></p>
+                    </div>
+                </div>
+
+                <div class="character-card" id="character4">
+                    <div class="character-info">
+                        <img src="" alt="Character 4" class="character-image">
+                        <h3 class="character-name">Character 4</h3>
+                    </div>
+                    <div class="dialogue-box">
+                        <p class="dialogue-text"></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="story-controls">
+                <button id="next-scene">Next Scene</button>
+                <button id="reset-story">Reset Story</button>
+            </div>
+        </div>
+    </div>
+    <script src="dialogue-game-script.js"></script>
+</body>
+</html>

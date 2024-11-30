@@ -1,0 +1,69 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: url("level-back.png");
+    /* background-color: #4CAF50; */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background-color:rgba(0, 0, 0, 0.5);
+    
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 900px;
+    height: 420px;
+}
+
+.level-selection {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+}
+
+.level-btn, .locked-btn {
+    background-image: linear-gradient(to right ,#8af8b3, #977dff);
+    
+    color: rgb(0, 0, 0);
+    /* border:none; */
+    /* border-width: 2px; */
+    /* border-color: rgb(0, 0, 0); */
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.level-btn:hover, .locked-btn:hover {
+    transform: scale(1.05);
+}
+
+.level-number {
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+.star-rating {
+    font-size: 20px;
+}
+
+.locked-btn {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.lock-icon {
+    font-size: 24px;
+}
